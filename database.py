@@ -69,6 +69,7 @@ class Database(object):
                         values.append(list(i))
 
         return [columns, self.__create_s(len(dataframe.columns)), values] #return title columns, array with %s, data
+        
     #insert data in database
     def insert_data(self, dataframe, table_name): #dataframe - pandas DataFrame with data, table_name - name table in MySQL
         data = self.__format_adjustment(dataframe) #format data
